@@ -17,7 +17,7 @@ Example:
 - id : number
 - member_id : number FOREIGN KEY references Members.id
 - amount : number
-- transaction_type : number (0-deposit,1-withdrawal)
+- transaction_type : choice (deposit,withdrawal)
 - transaction_date : date
 
 Example:
@@ -33,12 +33,12 @@ Example:
 - loan_amount : number
 - loan_date : date
 - due_date : date (loan_date + 30 days)
-- status : number (0-pending,1-approved,2-repaid)
+- status : choice (pending,approved,repaid)
 
 Example:
 ''''''''
-1 | 1 | 1000.00 | 01-05-2023 | 01-06-2023 | 1
-2 | 2 | 2000.00 | 10-05-2023 | 10-06-2023 | 2
+1 | 1 | 1000.00 | 01-05-2023 | 01-06-2023 | approved
+2 | 2 | 2000.00 | 10-05-2023 | 10-06-2023 | repaid
 
 4. LoanRepayments
 
