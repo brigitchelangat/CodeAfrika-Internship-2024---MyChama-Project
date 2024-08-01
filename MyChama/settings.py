@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Loans',
     'Members',
     'Savings',
+    'LoanRepayments',
 ]
 
 MIDDLEWARE = [
