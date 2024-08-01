@@ -1,0 +1,53 @@
+1. Members 
+
+- id : number
+- first_name : text
+- last_name : text
+- email : text
+- phone_number : text
+- joining_date : date
+
+Example:
+''''''''
+1 | Brigit | Chelangat | brigitchelangat45@gmail.com | 0704343645
+2 | Evans  | Kipkoech  | evansruto496@gmail.com      | 0703246546
+
+2. Savings
+
+- id : number
+- member_id : number FOREIGN KEY references Members.id
+- amount : number
+- transaction_type : number (0-deposit,1-withdrawal)
+- transaction_date : date
+
+Example:
+''''''''
+1 | 1 | 500.00  | deposit    | 01-03-2023
+2 | 1 | 200.00  | withdrawal | 15-03-2023
+3 | 2 | 1000.00 | deposit    | 10-04-2023
+
+3. Loans
+
+- id : number
+- member_id : number FOREIGN KEY references Members.id
+- loan_amount : number
+- loan_date : date
+- due_date : date (loan_date + 30 days)
+- status : number (0-pending,1-approved,2-repaid)
+
+Example:
+''''''''
+1 | 1 | 1000.00 | 01-05-2023 | 01-06-2023 | 1
+2 | 2 | 2000.00 | 10-05-2023 | 10-06-2023 | 2
+
+4. LoanRepayments
+
+- id : number
+- loan_id : number FOREIGN KEY references loans.id
+- amount : number
+- repayment_date : date
+
+Example:
+''''''''
+1 | 1 | 500.00  | 15-05-2023
+2 | 2 | 2000.00 | 15-06-2023
