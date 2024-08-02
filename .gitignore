@@ -1,14 +1,12 @@
-*.vscode
-vscode
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
  
 # C extensions
-*.pdf 
-*.txt
 *.so
+*.pdf
+*.txt
 # Distribution / packaging
 .Python
 build/
@@ -125,9 +123,8 @@ celerybeat.pid
 # Environments
 .env
 .venv
-
-venv/
 env/
+venv/
 ENV/
 env.bak/
 venv.bak/
