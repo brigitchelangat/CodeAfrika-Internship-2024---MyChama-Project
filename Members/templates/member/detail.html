@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%  block title %} Details - {{member.first_name}} {{member.last_name}} {% endblock %}
+
+
+<div class="container">
+    {% block content %}
+    <h1> {{member.first_name}} {{member.last_name}}</h1>
+    <div class="member-details">
+        <p><strong>ID NO</strong> {{member.id_no}}</p>
+        <p><strong>First Name:</strong> {{member.first_name}}</p>
+        <p><strong>Last Name:</strong> {{member.last_name}}</p>
+        <p><strong>Email:</strong> {{member.email}}</p>
+        <p><strong>Phone:</strong> {{member.phone_number}}</p>
+    </div>
+    {% endblock %}
+</div>

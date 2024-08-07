@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{%  block title %} All Members {% endblock %}
+
+<div class="container">
+{% block content%}
+<h2>Members List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID NO</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+               {% for member in members %}
+                <tr>
+                    <td><a href="{% url 'members:member_details' member.id %}">{{member.id_no}}</a></td>
+                    <td>{{member.first_name}}</td>
+                    <td>{{member.last_name}}</td>
+                    <td>{{member.email}}</td>
+                    <td>{{member.phone_number}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+{% endblock %}
+
+</div>
