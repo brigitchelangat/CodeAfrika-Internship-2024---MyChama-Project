@@ -21,6 +21,6 @@ class Loan(models.Model):
     loan_balance = models.DecimalField(max_digits=10, decimal_places=2, default= 0.00)
     loan_date = models.DateField()
     due_date = models.DateField()
-    status = models.CharField(max_length=10, choices=LOAN_STATUS_CHOICES)
+    status = models.IntegerField(choices=LOAN_STATUS_CHOICES)
     comments = models.CharField(max_length=255,default="Unspecified")
-    repaid = models.CharField(max_length=5, choices=REPAID_CHOICES, default=1)
+    repaid = models.IntegerField(choices=REPAID_CHOICES, default=1)
